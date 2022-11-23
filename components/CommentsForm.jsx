@@ -50,12 +50,14 @@ const CommentsForm = ({ slug }) => {
   }
 
   return (
-    <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
-      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Leave a reply</h3>
+    <div className='bg-slate-100 shadow-lg rounded-lg p-8 pb-12 mb-8'>
+      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
+        Leave a reply
+      </h3>
       <div className='grid grid-cols-1  gap-4 mb-4'>
         <textarea
           ref={commentEl}
-          className='p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
+          className='p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-orange-700 bg-slate-200 text-slate-900 shadow-inner shadow-slate-700'
           placeholder='Comment'
           name='comment'
         />
@@ -64,7 +66,7 @@ const CommentsForm = ({ slug }) => {
         <input
           type='text'
           ref={nameEl}
-          className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
+          className='py-2 px-4 outline-none w-full rounded-lg focus:ring-orange-700 bg-slate-200 text-slate-900 shadow-inner shadow-slate-700'
           placeholder='Name'
           name='name'
         />
@@ -72,7 +74,7 @@ const CommentsForm = ({ slug }) => {
         <input
           type='text'
           ref={emailEl}
-          className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
+          className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-orange-700 bg-slate-200 text-slate-900 shadow-inner shadow-slate-700'
           placeholder='Email'
           name='email'
         />
@@ -87,7 +89,7 @@ const CommentsForm = ({ slug }) => {
             value='true'
           />
           <label
-            className='ml-2 text-gray-500 cursor-pointer'
+            className='ml-2 text-slate-700 cursor-pointer'
             htmlFor='storeData'
           >
             Save my e-mail and name for the next time I comment
@@ -101,7 +103,7 @@ const CommentsForm = ({ slug }) => {
         <button
           type='button'
           onClick={handleCommentSubmission}
-          className='transition duration-500 ease hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 cursor-pointer'
+          className='transition duration-500 ease hover:bg-cyan-700 inline-block bg-orange-700 text-lg rounded-full text-white px-8 py-3 cursor-pointer'
         >
           Post Comment
         </button>

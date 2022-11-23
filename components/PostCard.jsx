@@ -5,7 +5,7 @@ import Link from 'next/link'
 const PostCard = ({ post }) => {
   console.log(post)
   return (
-    <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
+    <div className='bg-slate-100 shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
       <div className='relative overflow shadow-md pb-80 mb-6'>
         <picture>
           <img
@@ -15,7 +15,7 @@ const PostCard = ({ post }) => {
           />
         </picture>
       </div>
-      <h1 className='transition duration-700 text-center mb-8 cursor:pointer hover:text-pink-600 text-3xl font-semibold'>
+      <h1 className='transition duration-700 text-center mb-8 cursor:pointer hover:text-orange-700 text-3xl font-semibold'>
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
@@ -29,14 +29,14 @@ const PostCard = ({ post }) => {
               src={post.author.photo.url}
             />
           </picture>
-          <p className='inline align-middle text-gray-700 ml-2 text-lg'>
+          <p className='inline align-middle text-slate-700 ml-2 text-lg'>
             {post.author.name}
           </p>
         </div>
-        <div className='font-medium text-gray-700'>
+        <div className='font-medium text-slate-700'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-6 w-6 inline mr-2 text-pink-500'
+            className='h-6 w-6 inline mr-2 text-orange-700'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -51,12 +51,12 @@ const PostCard = ({ post }) => {
           <span>{moment(post.createdAt).format('MMM DD, YYYY')}</span>
         </div>
       </div>
-      <p className='text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8'>
+      <p className='text-center text-lg text-slate-700 font-normal px-4 lg:px-20 mb-8'>
         {post.excerpt}
       </p>
       <div className='text-center'>
         <Link href={`/post/${post.slug}`}>
-          <span className='transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer'>
+          <span className='transition duration-500 transform hover:-translate-y-1 inline-block bg-orange-700 hover:bg-cyan-500 text-lg font-medium rounded-full text-slate-100 px-8 py-3 cursor-pointer'>
             Continue Reading
           </span>
         </Link>

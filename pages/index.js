@@ -5,7 +5,7 @@ import { getPosts } from '../services'
 
 export default function Home({ posts }) {
   return (
-    <div className='container mx-auto px-10 mb-8 '>
+    <div className='container mx-auto px-10 mb-8'>
       <FeaturedPosts />
       <Head>
         <title>CMS Blog</title>
